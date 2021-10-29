@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border: 1px solid grey;
+            padding-left: 20px;
+        }
+        footer{
+            border-top: 1px solid grey;
+            padding-left: 20px;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+        }
+        @media(max-width:500px){
+            .content{
+                flex-direction: column;
+                
+            }
+        }
+        .content nav{
+            border-right: 1px solid gray;
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        .content aside{
+            border-left: 1px solid grey;
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>coding life</h1>
+
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>JS</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ipsam libero distinctio magnam recusandae veritatis expedita dolores? Modi sit illum molestias fuga voluptate eaque velit. Facilis error culpa modi autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, repellendus. Vel fugiat nemo tempore inventore. Esse modi sequi, obcaecati nostrum architecto in reiciendis fugiat impedit cum. Quis dolor quam nam. 
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+
+            <a href="www.naver.com">홈페이지</a>
+        </footer>
+    </div>
+</body>
+</html>

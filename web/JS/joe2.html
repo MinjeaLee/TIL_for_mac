@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joe_API</title>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #site_title {
+            position: relative;
+            text-align: center;
+            top: 351px;
+        }
+
+        .content {
+            position: relative;
+            top: auto;
+            margin-top: 445px;
+            margin-left: 0px;
+            left: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="">
+    <h1 id="site_title">MY SITE</h1>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchTerm" id="bookname" placeholder="What are you looking for?">
+            <button type="submit" class="searchButton" id="search">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <button type="submit" id="reseach">재검색</button>
+    <p class="content">
+        <p id="booktitle"></p>
+        <p id="bookthumbnail"></p>
+    </p>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".searchButton").click(function () {
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: $(".searchTerm").val() },
+                    headers: { Authorization: "KakaoAK b0bdb670fe416625f021d3a46edd7cf3" }
+                })
+
+                    .done(function (msg) {
+                        console.log(msg.documents[0].title);
+                        console.log(msg.documents[0].thumbnail);
+                        $("#booktitle").append("<strong>" + msg.documents[0].title + "</strong>");
+                        $("#bookthumbnail").append("<img src='" + msg.documents[0].thumbnail + "'>");
+                    });
+
+            })
+            // $('#research').click(function () {
+            //     $(".content").empty();
+            // });
+        })
+    </script>
+</body>
+
+</html>

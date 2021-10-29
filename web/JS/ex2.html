@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        #typing{
+            width: 500px;
+            margin-top: 200px;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1>hiohihihihi</h1>
+        <div class="d-grid gap-2 d-md-block  position-absolute top-50 start-50 translate-middle">
+            <button type="button" class="btn btn-primary btn-lg" onclick="document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';">night</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black'; ">day</button>
+        </div>
+        <div class="input-group mb-3" id="typing">
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" onchange="alert('changed')">
+        </div>
+    </p>
+    <input type="text" onkeydown="alert('keydown')">
+    
+</body>
+</html>
