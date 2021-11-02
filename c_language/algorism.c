@@ -23,7 +23,7 @@ char* strrev_1(char* str){
     return str;    
 } 
 
-// Æ¯Á¤ ¹®ÀÚ Á¦°Å
+// Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 void Eliminate(char *str, char ch)
 {
     for (; *str != '\0'; str++)
@@ -61,15 +61,15 @@ char* strtok_2(char *str, char *std){
     return start_str;
 }
 
-// ¹öºí Á¤·Ä
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 void bubble_sort(int list[], int n){
 
   int i, j, temp;
 
   for(i=n-1; i>0; i--){
-    // 0 ~ (i-1)±îÁö ¹İº¹
+    // 0 ~ (i-1)ï¿½ï¿½ï¿½ï¿½ ï¿½İºï¿½
     for(j=0; j<i; j++){
-      // j¹øÂ°¿Í j+1¹øÂ°ÀÇ ¿ä¼Ò°¡ Å©±â ¼øÀÌ ¾Æ´Ï¸é ±³È¯
+      // jï¿½ï¿½Â°ï¿½ï¿½ j+1ï¿½ï¿½Â°ï¿½ï¿½ ï¿½ï¿½Ò°ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½È¯
       if(list[j]<list[j+1]){
         temp = list[j];
         list[j] = list[j+1];
@@ -79,13 +79,13 @@ void bubble_sort(int list[], int n){
   }
 }
 
-// ¹®ÀÚ¿­ -> ´Ü¾î Àß¶ó ÀÌÁß¹è¿­¿¡ ³Ö±â
+// ï¿½ï¿½ï¿½Ú¿ï¿½ -> ï¿½Ü¾ï¿½ ï¿½ß¶ï¿½ ï¿½ï¿½ï¿½ß¹è¿­ï¿½ï¿½ ï¿½Ö±ï¿½
 char *word_to_arry(char *str){
     char word[50][50], string[101], *p;
     int word_index_1d = 0, word_index_2d = 0;
 
     for(p = string; p < str + strlen(str); p++){  
-        if(*p != ' ' && *p != '.'){             // ´Ü¾î ²÷À» Á¶°Ç »ğÀÔ
+        if(*p != ' ' && *p != '.'){             // ï¿½Ü¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             word[word_index_1d][word_index_2d] = *p;
             word_index_2d++;
         }
@@ -95,14 +95,14 @@ char *word_to_arry(char *str){
             word_index_2d = 0;
         }
     }   
-    if(){ // ¸¸¾à ¸¶Áö¸· ±ÛÀÚ°¡ ¾ËÆÄºªÀÌ¸é 
+    if(){ // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½Äºï¿½ï¿½Ì¸ï¿½ 
         word_index_1d++; // ++ 
     }    
     return word;
 }
 
 
-// ¹®ÀÚ¿­ »ğÀÔ ÇÔ¼ö
+// ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
 void StringAdd(char arr[], char ch, int index) {
     char* p;
     int len;
@@ -115,4 +115,21 @@ void StringAdd(char arr[], char ch, int index) {
     *(arr + index) = ch;
 
     *(arr + strlen(arr)) = '\0';
+}
+
+
+// realloc
+void size_up_malloc(int *s, int **arr, char *str){
+    int newsize = *s + strlen(str); // strlen(str) ë¶€ë¶„ -> ëŠ˜ë¦¬ê³  ì‹¶ì€ í¬ê¸°
+    int *temp;
+    temp = malloc(sizeof(int) * newsize);
+
+
+    for (int i = 0; i < *s; i++){
+        temp[i] = (*arr)[i];
+    }
+
+    free(*arr);  
+    *arr = temp; 
+    *s = newsize;
 }

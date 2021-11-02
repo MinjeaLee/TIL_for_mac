@@ -4,16 +4,11 @@
 #include <stdlib.h>
 
 int main(){
-    int a;
-    
-    scanf("%d", &a);
 
-    if(a == 0){
-        printf("0");
-    }
-    else{
-        printf("%d", a);
-    }
+
+   printf("Hello world");
+   printf(" Hello\n");
+   printf("asdasd");
 
 
     return 0;
