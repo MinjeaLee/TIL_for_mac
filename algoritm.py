@@ -44,7 +44,7 @@ def abs(a):
         return a
 
 
-#gcd Á¦±ÍÇÔ¼ö »ç¿ë
+#gcd ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½
 def GCD(a, b):
     if a < b:
         a, b = b, a
@@ -55,7 +55,7 @@ def GCD(a, b):
     else:
         return GCD(b , a%b)
 
-# gdc(ÃÖ´ë °ø¾à¼ö)
+# gdc(ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½)
 def gcd(a, b):
     if a < b:
         a, b = b, a
@@ -68,20 +68,20 @@ def gcd(a, b):
             b = n
         result = a
 
-# lcm(ÃÖ¼Ò °ø¹è¼ö)
+# lcm(ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½)
 def lcm(a, b):
     result = a * b / gcd(a,b)
     return result
         
 
-# ¼ÒÀÎ¼öºÐÇØ
+# ï¿½ï¿½ï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½
 def Prime_factorization(num):
     for i in range(2, num + 1):
         while num % i == 0:
             num /= i
             print("{} *".format(i))
 
-# ¼Ò¼ö ÆÇº°
+# ï¿½Ò¼ï¿½ ï¿½Çºï¿½
 def Distingusih_of_Prime(num):
     div = 0
     for i in range(2, num + 1):
@@ -91,7 +91,7 @@ def Distingusih_of_Prime(num):
         print("Prime")
     div = 0
 
-# ¼ýÀÚ ¹Ý´ë·Î - 1 // ex) 1234 -> 4321
+# ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´ï¿½ï¿½ - 1 // ex) 1234 -> 4321
 
 def reverse_int(num):
     result = 0
@@ -101,7 +101,7 @@ def reverse_int(num):
         result += check
         num /= 10
 
-# ¼ýÀÚ ÃßÃâ, ¼ýÀÚ ¹Ý´ë·Î ÇÏ³ª ¾¿ Ãâ·Â
+# ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´ï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
 
 def invert_num(num):
     while num > 0:
@@ -110,3 +110,6 @@ def invert_num(num):
         print(one_num,"\n")
 
 
+# pop
+
+# append 
