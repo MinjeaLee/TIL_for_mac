@@ -11,6 +11,25 @@
 #include <stdlib.h>
 
 int main(){
+    char str[100];
+    char result[100];
+    int i, j, k, len;
+    char temp;
+
+    scanf("%s", str);
+    len = strlen(str);
+
+    for(i=0; i<len - 1; i++){
+        for(j=0; j<len - 1 - i; j++){
+            if(str[j] > str[j+1]){
+                temp = str[j];
+                str[j] = str[j+1];
+                str[j+1] = temp;
+            }
+        }
+    }
+
+    printf("%s", str);
     
 
     return 0;
