@@ -3,21 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-// make function two num add 
-int add(int a, int b)
-{
-    return a + b;
-}
-
 int main(){
-    int a, b;
-    int result;
-
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = add(a, b);
-
-    printf("%d + %d = %d\n", a, b, result);
+    char buffer[200];
+    
 
     return 0;
 }
