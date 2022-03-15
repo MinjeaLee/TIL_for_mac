@@ -1,14 +1,20 @@
+#pragma warning(disable:4996)
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-// operation
+int num;
+
+int square(int x){
+    printf("square(%d)\n", x);
+
+    return x * x;
+}
+
 int main(){
+    scanf("%d", &num);
 
-    printf("%d\n", 1 % 3); // 1: 1을 3으로 나누면 몫은 0 나머지는 1
-    printf("%d\n", 2 % 3); // 2: 2를 3으로 나누면 몫은 0 나머지는 2
-    printf("%d\n", 3 % 3); // 0: 3을 3으로 나누면 몫은 1 나머지는 0
-    printf("%d\n", 4 % 3); // 1: 4를 3으로 나누면 몫은 1 나머지는 1
-    printf("%d\n", 5 % 3); // 2: 5를 3으로 나누면 몫은 1 나머지는 2
-    printf("%d\n", 6 % 3); // 0: 6을 3으로 나누면 몫은 2 나머지는 0
+    printf("%d\n", square(num));
 
     return 0;
 }
