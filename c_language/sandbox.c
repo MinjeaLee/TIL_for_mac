@@ -1,20 +1,21 @@
-#pragma warning(disable:4996)
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+int main()
+{
+    int a;
 
-int num;
+    scanf("%d", &a);
 
-int square(int x){
-    printf("square(%d)\n", x);
+    int n[a];
 
-    return x * x;
-}
+    for (int i = 0; i < a; i++)
+    {
+        scanf("%d", &n[i]);
+    }
 
-int main(){
-    scanf("%d", &num);
-
-    printf("%d\n", square(num));
+    for (int i = 0; i < a; i++)
+    {
+        printf("%d\n", n[i]);
+    }
 
     return 0;
 }
