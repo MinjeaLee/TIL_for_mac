@@ -1,21 +1,20 @@
+#pragma warning(disable:4996)
 #include <stdio.h>
-int main()
-{
-    int a;
+#include <string.h>
+#include <stdlib.h>
 
-    scanf("%d", &a);
+int main(){
+    int a[] = {3, 4, 5, 6, 1, 2};
+    int max = -1;
 
-    int n[a];
-
-    for (int i = 0; i < a; i++)
-    {
-        scanf("%d", &n[i]);
+    for(int i = 0; i < 6; i++){
+        if(a[i] > max){
+            max = a[i];
+        }
     }
 
-    for (int i = 0; i < a; i++)
-    {
-        printf("%d\n", n[i]);
-    }
+    printf("%d\n", max);
+
 
     return 0;
 }
