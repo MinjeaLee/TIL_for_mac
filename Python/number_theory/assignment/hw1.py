@@ -30,5 +30,3 @@ print("generate_all_primes(1000) : {}".format(generate_all_primes(1000)))
 print("generate_random_prime(2, 11) : {}".format(generate_random_primes(2, 11)))
 print("generate_random_prime(100, 200) : {}".format(generate_random_primes(100, 200)))
 print("generate_random_prime(1000, 2000) : {}".format(generate_random_primes(1000, 2000)))
-
-
