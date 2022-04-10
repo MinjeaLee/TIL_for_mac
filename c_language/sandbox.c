@@ -1,73 +1,52 @@
 #include <stdio.h>
-#include <string.h>
-
-int main(void)
+int main()
 {
-    char names[200] = {
-        0,
-    };
-    char array[50][21] = {
-        0,
-    };
+    int a, b, c, n, i, k, m = 0, n1;
 
-    int i, j;
-    int flag = 0;
-    int names_len;
+    scanf_s("%d", &n);
 
-    int idx = 0;
-    int k = 0;
-
-    fgets(names, 200, stdin);
-
-    names_len = strlen(names);
-    names[names_len - 1] = '\0';
-
-    for (i = 0; i < names_len; i++)
+    for (i = 1; i < n + 1; i++)
     {
-        if (names[i] == '"')
-        {
-            flag++;
-        }
-        if (flag % 2 == 0 && names[i] == ' ')
-        {
-            names[i] = '\0';
-        }
+        printf(" ");
     }
 
-    while (idx < names_len)
+    n1 = (n * n) % 9;
+
+    while (n1 <= 0)
     {
-        if (*(names + idx) == '"')
-        {
-            idx++;
-        }
-        strcpy(array[k++], names + idx);
-        idx += strlen(names + idx) + 1;
+        n1 = n1 + 9;
+    }
+    while (n1 >= 10)
+    {
+        n1 = n1 - 9;
     }
 
-    char tmp[21];
-    for (i = 0; i < k - 1; i++)
+    printf("%d\n", n1);
+
+    for (a = 1; a < n; a++)
     {
-        for (j = i; j < k; j++)
+        m += (a * 2 + 1);
+
+        for (b = a; b < n; b++)
         {
-            if (strcmp(array[i], array[j]) > 0)
+            printf(" ");
+        }
+        k = (((n * n) % 9) - m);
+        for (c = 0; c <= (a * 2); c++)
+        {
+
+            while (k <= 0)
             {
-                strcpy(tmp, array[i]);
-                strcpy(array[i], array[j]);
-                strcpy(array[j], tmp);
+                k = k + 9;
             }
-        }
-    }
+            while (k >= 10)
+            {
+                k = k - 9;
+            }
 
-    for (i = 0; i < k; i++)
-    {
-        for (j = 0; j < strlen(array[i]); j++)
-        {
-            if (array[i][j] == '"')
-                continue;
-            printf("%c", array[i][j]);
+            printf("%d", k);
+            k++;
         }
         printf("\n");
     }
-
-    return 0;
 }
