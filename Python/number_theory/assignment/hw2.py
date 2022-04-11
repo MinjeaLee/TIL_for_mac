@@ -22,5 +22,4 @@ print("extended_gcd(45, 75) =", extended_gcd(45, 75))
 print("extended_gcd(666, 1414) =", extended_gcd(666, 1414))
 print("extended_gcd(102, 222) =", extended_gcd(102, 222))
 print("extended_gcd(2**101+16, 2**202+8) =", extended_gcd(2**101+16, 2**202+8))
-    
-    
+
