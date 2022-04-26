@@ -3,8 +3,13 @@
 #include <string.h>
 #include <stdlib.h>
 
+// for 
 int main(){
-    char str[100];
+    int a
+
+    for(int i = 0; i < 10; i++){
+        
+    }
 
     return 0;
 }
