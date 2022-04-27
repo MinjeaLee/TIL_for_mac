@@ -5,10 +5,14 @@
 
 // for 
 int main(){
-    int a
+    int a;
 
-    for(int i = 0; i < 10; i++){
-        
+    for(a = 0; a < 10; a++){
+        printf("%d\n", a);
+    }
+
+    while{
+        scanf("")
     }
 
     return 0;
