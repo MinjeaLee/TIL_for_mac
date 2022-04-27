@@ -1,9 +1,11 @@
-n = int(input())
-tmp = input().split()
+import sys
+
+n = int(sys.stdin.readline())
+tmp = sys.stdin.readline().split()
 answer = [int(i) for i in tmp]
 
-m = int(input())
-tmp = input().split()
+m = int(sys.stdin.readline())
+tmp = sys.stdin.readline().split()
 question = [int(i) for i in tmp]
 
 for i in range(m):
