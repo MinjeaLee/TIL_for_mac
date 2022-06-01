@@ -56,12 +56,6 @@
 - **Sejong University's security club S!** (2021.06 ~ )
   - Pwnable Study
 
-![Minjea's GitHub stats](https://github-readme-stats.vercel.app/api?username=MinjeaLee&show_icons=true&theme=buefy)
+
+[![Minjea's GitHub stats](https://github-readme-stats.vercel.app/api?username=MinjeaLee&show_icons=true&theme=buefy)]
 [![Minjea's github stats](https://github-readme-stats.vercel.app/api/top-langs/?username=MinjeaLee&layout=compact&theme=buefy)](https://github.com/MinjeaLee)
-
-
-
-
-
-
-
