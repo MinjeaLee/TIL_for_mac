@@ -31,8 +31,9 @@
     <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
     <img alt="github" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
     <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"/>
-    <img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white">
+    <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white"/>
     <br>
+    <img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white">
     <img alt="Visual studio" src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white">
     <img alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?style=for-the-badge&logo=git&logoColor=white">
     <img alt="Codepen" src="https://img.shields.io/badge/Codepen-000000.svg?style=for-the-badge&logo=codepen&logoColor=white">
@@ -55,7 +56,8 @@
 - **Sejong University's security club S!** (2021.06 ~ )
   - Pwnable Study
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=MinjeaLee&show_icons=true&theme=buefy)
+![Minjea's GitHub stats](https://github-readme-stats.vercel.app/api?username=MinjeaLee&show_icons=true&theme=buefy)
+[![Minjea's github stats](https://github-readme-stats.vercel.app/api/top-langs/?username=MinjeaLee&layout=compact&theme=buefy)](https://github.com/MinjeaLee)
 
 
 
