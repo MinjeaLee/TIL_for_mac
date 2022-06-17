@@ -1,23 +1,27 @@
-#pragma warning(disable:4996)
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-
-// hanoi using recursion
-void hanoi(int n, char from, char by, char to) {
-    if (n == 1) {
-        printf("1 : %c -> %c\n", from, to);
-    } else {
-        hanoi(n - 1, from, to, by);
-        printf("%d : %c -> %c\n", n, from, to);
-        hanoi(n - 1, by, from, to);
+int main() {
+  char *ptr = NULL;
+  int idx;
+  while (1) {
+    printf("> ");
+    scanf("%d", &idx);
+    switch (idx) {
+      case 1:
+        if (ptr) {
+          printf("Already allocated\n");
+          break;
+        }
+        ptr = malloc(256);
+        break;
+      case 2:
+        if (!ptr) {
+          printf("Empty\n");
+        }
+        free(ptr);
+        break;
+      default:
+        break;
     }
-}
-
-int main(){
-    int n;
-    scanf("%d", &n);
-    hanoi(n, 'A', 'B', 'C');
-
-    return 0;
+  }
 }
