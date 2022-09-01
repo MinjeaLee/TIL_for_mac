@@ -1,27 +1,15 @@
+#pragma warning(disable:4996)
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
-int main() {
-  char *ptr = NULL;
-  int idx;
-  while (1) {
-    printf("> ");
-    scanf("%d", &idx);
-    switch (idx) {
-      case 1:
-        if (ptr) {
-          printf("Already allocated\n");
-          break;
-        }
-        ptr = malloc(256);
-        break;
-      case 2:
-        if (!ptr) {
-          printf("Empty\n");
-        }
-        free(ptr);
-        break;
-      default:
-        break;
-    }
-  }
+
+int main(){
+    int a = 10;
+    int *ptr, **dptr;
+
+    ptr = &a;
+    dptr = &ptr;
+
+
+    return 0;
 }

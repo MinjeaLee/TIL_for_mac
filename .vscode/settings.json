@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "algorithm": "c",
+        "string.h": "c",
+        "cstring": "c",
+        "locale": "c"
     }
 }
