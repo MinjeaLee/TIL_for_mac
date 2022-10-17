@@ -47,9 +47,9 @@ int inplacepartition(int list[], int left, int right, int pivot)
     int low = left;
     int high = right + 1;
 
-    temp = list[left];
-    list[left] = list[pivot];
-    list[pivot] = temp;
+    temp = list[pivot];
+    list[pivot] = list[right];
+    list[right] = temp;
 
     do
     {
