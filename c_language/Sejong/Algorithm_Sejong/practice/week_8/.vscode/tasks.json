@@ -1,8 +1,9 @@
-{
+{ //task.json
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc 활성 파일 빌드",
+            "label": "C/C++: g++ build active file",
             "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
@@ -10,6 +11,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
+                //"${fileDirname}/a.out" 
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -21,8 +23,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "디버거에서 생성된 작업입니다."
+            "detail": "compiler: /usr/bin/gcc"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

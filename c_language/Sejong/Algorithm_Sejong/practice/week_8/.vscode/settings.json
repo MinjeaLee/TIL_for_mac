@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "algorithm": "c",
+        "string.h": "c",
+        "cstring": "c",
+        "locale": "c",
+        "stdlib.h": "c",
+        "unistd.h": "c"
+    }
+}

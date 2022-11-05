@@ -1,57 +1,9 @@
-{
+{ //task.json
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build_gcc",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-g",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out",
-                "${file}"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "build_g++",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out",
-                "${file}"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "exec",
-            "type": "shell",
-            "command": "${fileDirname}/${fileBasenameNoExtension}.out",
-            "group": "build"
-        },
-        {
-            "type": "shell",
-            "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build"
-        },
-        {
             "type": "cppbuild",
-            "label": "C/C++: gcc 활성 파일 빌드",
+            "label": "C/C++: g++ build active file",
             "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
@@ -59,6 +11,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
+                //"${fileDirname}/a.out" 
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -70,7 +23,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "디버거에서 생성된 작업입니다."
+            "detail": "compiler: /usr/bin/g++"
         }
     ]
 }

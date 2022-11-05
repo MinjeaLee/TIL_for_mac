@@ -11,6 +11,8 @@
       // "program": "${workspaceFolder}/a.out",
       "program": "${workspaceFolder}/${fileBasenameNoExtension}",
       "args": [],
+      // "externalConsole": true,
+      "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     }
   ]
