@@ -57,11 +57,19 @@ void printNode(Node *node);
 void freeGraph(Graph *graph);
 
 int main() {
-	Graph *graph = NULL;
+	Graph *graph = createGraph(6);
 	int size = 0;
 	char cmd;
 	int src, dest, weight;
 
+	addEdge(graph, 1, 2, 1);
+	addEdge(graph, 1, 3, 1);
+	addEdge(graph, 1, 4, 1);
+	addEdge(graph, 1, 6, 2);
+	addEdge(graph, 2, 3, 1);
+	addEdge(graph, 3, 5, 4);
+	addEdge(graph, 5, 5, 4);
+	addEdge(graph, 5, 6, 3);
 	while (1) {
 		scanf("%c", &cmd);
 		switch (cmd) {
@@ -98,6 +106,19 @@ int main() {
 			return 0;
 		}
 	}
+}
+
+// BFS
+void printNode(Node *node) {
+	if (node == NULL) {
+		printf("-1\n");
+		return;
+	}
+	while (node != NULL) {
+		printf("%d %d ", node->vertex, node->weight);
+		node = node->next;
+	}
+	printf("\n");
 }
 
 Graph *createGraph(int size) {
