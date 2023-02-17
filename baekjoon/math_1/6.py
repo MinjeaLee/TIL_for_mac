@@ -12,11 +12,16 @@ for i in range(t):
 	k = int(sys.stdin.readline()) # 층
 	n = int(sys.stdin.readline()) # 호수 
 	for j in range(1, k):
-		floor.append(sigma(floor[j - 1], n))
+		# 2층의 4호 
+		floor.append(sigma(floor[j - 1], n)) 
 	if k == 0:
 		print(n)
 	else:
 		print(sum(floor[k - 1]))
+		# 아니 밑에 층의 합이 해당 층의 호수의 사람이 되자나
+		# 그니까 내건 왜 틀렸는지를 모르겠다
+		# 봐봐
+		
 
 # chatGPT 코드
 
