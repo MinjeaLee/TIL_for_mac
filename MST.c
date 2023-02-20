@@ -9,7 +9,9 @@ int hi(int a, ...){
 	va_start(ap, a);
 	for(i = 0; i < a; i++){
 		printf("%d ", va_arg(ap, int));
-	}ㅁㅁ
+	}
+	// 포인터 문제 
+	
 	va_end(ap);
 	return 0;
 }
