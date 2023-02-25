@@ -1,5 +1,5 @@
 # 11653
-
+import sys
 import sys, math
 
 def check_prime(x):
@@ -10,26 +10,24 @@ def check_prime(x):
 			return 0
 	return 1
 
-# prime_nums = []
 n = int(sys.stdin.readline())
-# for i in range(2, n + 1):
-# 	if check_prime(i):
-# 		prime_nums.append(i)
-	
-# print(prime_nums)
+# n = int(sys.argv[1])
 
-while n != 1:
-	flag = 0
+while n > 1:
 	for i in range(2, n + 1):
-		if check_prime(i):
-			if n % i == 0:
-				print(i)
-				n //= i
-				flag = 1
-		if flag:
+		if check_prime(i) and n % i == 0:
+			print(i)
+			n //= i
 			break
-	# for i in prime_nums:
-	# 	if n % i == 0:
-	# 		print(i)
-	# 		n //= i
-	# 		break
+
+# chatgpt
+
+n = int(sys.stdin.readline())
+
+i = 2
+while n > 1:
+    if n % i == 0:
+        n //= i
+        print(i)
+    else:
+        i += 1
