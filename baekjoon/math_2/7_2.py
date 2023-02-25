@@ -1,20 +1,15 @@
 # 9020
 import sys
 
-def Eratos(n):
-	num = [i for i in range(n + 1)]
-	num[1] = 0
-	for i in range(2, n + 1):
-		if num[i] == 0:
-			continue
-		for j in range(2 * i, n + 1, i):
-			num[j] = 0
-	result = []
-	for i in num:
-		if i != 0:
-			result.append(i)
-	return result
 
+def eratosthenes(n):
+    nums = [i for i in range(2, n+1)]
+    primes = []
+    while nums:
+        p = nums[0]
+        primes.append(p)
+        nums = [x for x in nums if x % p != 0]
+    return primes
 
 def min_diff(arr):
 	arr_len = len(arr)
@@ -37,7 +32,8 @@ for _ in range(T):
 	n = int(sys.stdin.readline())
 	result = []
 	flag = 0
-	primes = Eratos(n)
+	# primes = Eratos(n)
+	primes = eratosthenes(n)
 	for i in primes:
 		a = []
 		if primes.count(n - i):
