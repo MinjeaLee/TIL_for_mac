@@ -1,12 +1,20 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+
+void swap(int *a, int *b) {
+	/*
+		code
+	*/
+}
 
 int main(){
-	int n = 15;
+	int a, b;
 
-	n /= 3;
-	printf("%d\n", n);
+	scanf("%d %d", &a, &b);
+
+	/*
+		swap 함수를 사용하시오
+	*/
+	printf("%d %d\n", a, b);
 
 	return 0;
 }

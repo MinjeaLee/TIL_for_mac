@@ -1,10 +1,12 @@
-def eratosthenes(n):
-    nums = [i for i in range(2, n+1)]
-    primes = []
-    while nums:
-        p = nums[0]
-        primes.append(p)
-        nums = [x for x in nums if x % p != 0]
-    return primes
+import sys
 
-print(eratosthenes(100))
+n, k = map(int, sys.stdin.readline().split())
+
+arr = list(map(int, sys.stdin.readline().split()))
+
+for i in range(n - 1):
+	for j in range(i + 1, n):
+		if arr[j] > arr[i]:
+			arr[j], arr[i] = arr[i], arr[j]
+		
+print(arr[k - 1])
