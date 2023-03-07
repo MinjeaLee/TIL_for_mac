@@ -1,20 +1,26 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
-	/*
-		code
-	*/
-}
+int main()
+{
+	int num1, num2;
+	char pls;
 
-int main(){
-	int a, b;
+	scanf("%d ", &num1);
+	scanf("%d ", &num2);
+	scanf("%c", &pls);
 
-	scanf("%d %d", &a, &b);
-
-	/*
-		swap 함수를 사용하시오
-	*/
-	printf("%d %d\n", a, b);
-
-	return 0;
+	switch (pls)
+	{
+	case '+':
+		printf("%d + %d = %d", num1, num2, num1 + num2);
+	case '-':
+		printf("%d - %d = %d", num1, num2, num1 - num2);
+	case '*':
+		printf("%d * %d = %d", num1, num2, num1 * num2);
+	case '/':
+		printf("%d / %d = %d", num1, num2, num1 / num2);
+	case '%':
+		printf("%d %%  %d = %d", num1, num2, num1 % num2);
+	}
+	return 0; 
 }

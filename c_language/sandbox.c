@@ -1,22 +1,14 @@
-/*
-		 ,r'"7
-r`-_   ,'  ,/
- \. ". L_r'
-   `~\/
-	  |
-      |
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 int main(){
-	printf("         ,r'\"7\n");
-	printf("r`-_   ,'  ,/\n");
-	printf(" \\. \". L_r'\n");
-	printf("   `~\\/\n");
-	printf("      |\n");
-	printf("      |");
+	int a[10];
+
+	for(int i = 0; i < 10; i++){
+		scanf("%d ", &a[i]);
+		printf("------%d\n", a[i]);
+	}
+
 	return 0;
 }
