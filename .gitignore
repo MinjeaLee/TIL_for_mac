@@ -2,3 +2,4 @@ tempCodeRunnerFile*
 *.out
 .vscode
 *.dSYM
+.gitignore
