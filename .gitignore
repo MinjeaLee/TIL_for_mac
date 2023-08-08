@@ -1,5 +1,10 @@
+*
+!*.*
+!*/
+
 tempCodeRunnerFile*
 *.out
 .vscode
 *.dSYM
 .gitignore
+.DS_Store
