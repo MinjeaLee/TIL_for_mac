@@ -35,4 +35,6 @@ plt.title('Magnitude Spectrum')
 plt.colorbar()
 end = time.time()
 print(end - start)
+# 이미지 저장
+plt.savefig('magnitude_spectrum.png', dpi=300, bbox_inches='tight')
 plt.show()

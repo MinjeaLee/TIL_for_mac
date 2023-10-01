@@ -16,5 +16,3 @@ public static int mystery(Scanner console) {
 	// Point E 
 	return count;
 }
-
-Which of the following assertions are true at which point(s) in the code? Choose ALWAYS, NEVER, or SOMETIMES
